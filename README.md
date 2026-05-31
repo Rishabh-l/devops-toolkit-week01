@@ -35,6 +35,7 @@ chmod +x scripts/*.sh
 
 1. Master Deployment Engine
 Sets up systemd background configurations, installs the scheduling timer, and configures secure Nginx routing records. (Requires root privileges):
+sudo ./scripts/deploy.sh
 
 2. System Health Report Engine
 Generates an on-demand report detailing uptime, disk health limits, network interfaces, and processing consumers:
