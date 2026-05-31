@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -euo pipefail
 echo "========================================="
 echo "        SYSTEM HEALTH REPORT             "
 echo "        Date: $(date)"

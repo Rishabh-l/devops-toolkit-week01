@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -euo  pipefail
 # Check if both arguments (source and destination) are provided
 if [ -z "$1" ] || [ -z "$2" ]; then
     echo "Usage: $0 <source_directory> <destination_directory>"

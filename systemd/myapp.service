@@ -1,0 +1,12 @@
+[Unit]
+Description=Python DevOps Web Application
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/rishabh_patel/devops-toolkit-week01/myapp
+ExecStart=/usr/bin/python3 /home/rishabh_patel/devops-toolkit-week01/myapp/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -euo pipefail
 if [ -z "$1" ]; then
     echo "Usage: $0 <path_to_access.log>"
     exit 1
