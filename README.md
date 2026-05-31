@@ -1,8 +1,8 @@
 # DevOps Automated Systems Toolkit
 
-An enterprise-ready administrative automation utility utility and secured application delivery architecture developed for Linux/WSL environments. This toolkit provisions background health inspection frameworks, processing metrics analysis, high-availability security proxies, and user identity lifecycles.
+This repository contains a collection of system monitoring tools, automation scripts, and server configuration files built for the CSoT track at IIT Delhi. The toolkit focuses on general automation tasks like auditing server resources, processing network interaction logs, backup handling, and bulk account provisioning.
 
-## 📂 Project Architecture
+## 📂 Project Structure
 ```text
 devops-toolkit-week01/
 ├── .env.example
@@ -27,3 +27,27 @@ devops-toolkit-week01/
     ├── myapp.service
     ├── sysreport.service
     └── sysreport.timer
+
+
+## ⚙️ How to Run the Scripts
+Before running, ensure all execution permissions are set:
+chmod +x scripts/*.sh
+
+1. Master Deployment Engine
+Sets up systemd background configurations, installs the scheduling timer, and configures secure Nginx routing records. (Requires root privileges):
+
+2. System Health Report Engine
+Generates an on-demand report detailing uptime, disk health limits, network interfaces, and processing consumers:
+./scripts/sysreport.sh
+
+3. Log Analytics Interpreter
+Parses a target server access log to count total visits, summarize failures, and trace top sources:
+./scripts/log_parser.sh samples/sample_access.log
+
+4. Account Lifecycle Manager
+Creates or deletes multiple local system identities securely using a standard comma-separated text file:
+./scripts/user_manager.sh create samples/users.csv
+
+5. Compression Backup Utility
+Compresses a source directory into an organized date-stamped archive and writes localized tracing data:
+./scripts/backup.sh ~/devops-toolkit-week01/myapp /tmp/backups

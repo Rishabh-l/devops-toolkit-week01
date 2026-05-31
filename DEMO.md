@@ -52,6 +52,10 @@ $ systemctl status sysreport.timer
      Active: active (waiting) since Sun 2026-05-31 11:45:12 UTC; 5min ago
     Trigger: Sun 2026-05-31 11:50:12 UTC; 4min 50s left
 
+### Active Registration Hook Check:
+$ systemctl list-timers | grep sysreport
+Sun 2026-05-31 11:50:12 UTC  4min 50s left  n/a  n/a  sysreport.timer  sysreport.service
+
 ## 👥 4. User Identity Governance Module (user_manager.sh)
 $ ./scripts/user_manager.sh create samples/users.csv
 ℹ️  Skipping: User 'alice' already exists on this machine.
@@ -62,3 +66,24 @@ $ ./scripts/user_manager.sh create samples/users.csv
 $ ./scripts/backup.sh ~/devops-toolkit-week01/myapp /tmp/backups
 📦 Archiving contents of /home/rishabh_patel/devops-toolkit-week01/myapp...
 ✅ Backup successful! Saved to /tmp/backups/backup_20260531_173000.tar.gz
+
+## 📈 6. Traffic Log Analyzer Engine (log_parser.sh)
+$ ./scripts/log_parser.sh samples/sample_access.log
+============================================
+       DEVOPS LOG ANALYSIS REPORT
+============================================
+--- TOP 10 IP ADDRESSES ---
+     42 192.168.1.50
+     28 10.0.0.12
+     15 172.16.25.4
+      9 192.168.1.99
+
+--- TOP 10 MOST POPULAR PATHS ---
+     85 /index.html
+     54 /api/v1/status
+     21 /login
+     12 /favicon.ico
+
+--- ERROR SUMMARY ---
+Total client/server errors (4xx/5xx): 4
+============================================
