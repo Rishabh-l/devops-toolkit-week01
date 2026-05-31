@@ -1,5 +1,4 @@
-username,action
-alice,create
-bob,create
-charlie,delete
-
+username,password
+alice,SecurePass123!
+bob,AdminPassword456!
+charlie,DevOpsKing789!

@@ -22,6 +22,7 @@ fi
 echo "🔄 Reloading systemd core engine configuration hooks..."
 systemctl daemon-reload
 systemctl enable --now myapp.service
+systemctl enable --now sysreport.timer
 
 echo "🔒 Generating local self-signed SSL Encryption Certificates..."
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 \

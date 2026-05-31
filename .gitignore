@@ -2,3 +2,9 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# DevOps Toolkit Additions
+*.tar.gz
+*.key
+*.crt
+*.log
