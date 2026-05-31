@@ -1,0 +1,10 @@
+[Unit]
+Description=System Health Monitor Service
+
+[Service]
+Type=oneshot
+
+ExecStart=/home/rishabh_patel/devops-toolkit-week01/scripts/sysreport.sh
+
+[Install]
+WantedBy=multi-user.target

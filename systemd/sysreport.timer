@@ -1,0 +1,10 @@
+[Unit]
+Description=Run System Health Monitor Every 5 Minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+Unit=sysreport.service
+
+[Install]
+WantedBy=timers.target
