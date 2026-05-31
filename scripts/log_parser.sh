@@ -19,15 +19,15 @@ echo "==========================================="
 echo ""
 
 
-echo "--- TOP 3 IP ADDRESSES ---"
-awk '{print $1}' "$LOG_FILE" | sort | uniq -c | sort -rn | head -n 3
+echo "--- TOP 10 IP ADDRESSES ---"
+awk '{print $1}' "$LOG_FILE" | sort | uniq -c | sort -rn | head -n 10
 echo ""
 
-echo "--- TOP 3 MOST POPULAR PATHS ---"
-awk '{print $7}' "$LOG_FILE" | sort | uniq -c | sort -rn | head -n 3
+echo "--- TOP 10 MOST POPULAR PATHS ---"
+awk '{print $7}' "$LOG_FILE" | sort | uniq -c | sort -rn | head -n 10
 echo ""
 
 echo "--- ERROR SUMMARY ---"
-ERROR_COUNT=$(awk '$9 ~ /^[45]/ {print $9}' "$LOG_FILE" | wc -l)
+ERROR_COUNT=$(cat "$LOG_FILE" | awk '$9 ~ /^[45]/ {print $9}' | wc -l | xargs)
 echo "Total client/server errors (4xx/5xx): $ERROR_COUNT"
 echo "==========================================="

@@ -1,4 +1,5 @@
 username,password
-alice,SecurePass123!
-bob,AdminPassword456!
-charlie,DevOpsKing789!
+alice,changeme
+bob,changeme
+charlie,changeme
+
