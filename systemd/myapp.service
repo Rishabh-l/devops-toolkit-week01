@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/home/rishabh_patel/devops-toolkit-week01/myapp
-ExecStart=/usr/bin/python3 /home/rishabh_patel/devops-toolkit-week01/myapp/app.py
+WorkingDirectory=__REPO_DIR__/myapp
+ExecStart=/usr/bin/python3 __REPO_DIR__/myapp/app.py
 Restart=always
 
 [Install]

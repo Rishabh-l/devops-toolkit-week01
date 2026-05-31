@@ -3,8 +3,7 @@ Description=System Health Monitor Service
 
 [Service]
 Type=oneshot
-
-ExecStart=/home/rishabh_patel/devops-toolkit-week01/scripts/sysreport.sh
+ExecStart=__REPO_DIR__/scripts/sysreport.sh
 
 [Install]
 WantedBy=multi-user.target
